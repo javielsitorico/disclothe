@@ -609,11 +609,10 @@ img {
      text-transform: uppercase;
      font-weight: bold;
      height: fit-content;
-     padding: 10px 0;
+     padding: 10px;
      flex: 0;
      font-size: 18px;
      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
-     width: 100%;
      text-align: center;
 }
 
@@ -861,6 +860,10 @@ img {
 
      .contenido--ticket {
           position: static;
+     }
+
+     .formulario--campo {
+          flex-direction: column;
      }
 }
 
