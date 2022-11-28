@@ -54,13 +54,17 @@
                          </svg>
                          <input type="text" placeholder="Buscar un artículo" class="busqueda--cuadro">
                     </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24"
-                         height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none"
-                         stroke-linecap="round" stroke-linejoin="round">
-                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                         <circle cx="12" cy="7" r="4" />
-                         <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-                    </svg>
+
+                    <a href="#" onclick="document.getElementById('modal').style.display='block'">
+                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24"
+                              height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none"
+                              stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <circle cx="12" cy="7" r="4" />
+                              <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                         </svg>
+                    </a>
+
                     <a href="contacto.html">
                          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-help" width="24"
                               height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none"
@@ -91,13 +95,15 @@
                <div class="busqueda">
                     <input type="text" placeholder="Buscar un artículo" class="busqueda--cuadro">
                </div>
-               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24"
-                    viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <circle cx="12" cy="7" r="4" />
-                    <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-               </svg>
+               <a href="#" onclick="document.getElementById('modal').style.display='block'">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24"
+                         height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none"
+                         stroke-linecap="round" stroke-linejoin="round">
+                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                         <circle cx="12" cy="7" r="4" />
+                         <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                    </svg>
+               </a>
                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-help" width="24" height="24"
                     viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round"
                     stroke-linejoin="round">
@@ -114,12 +120,62 @@
                </svg>
           </div>
      </header>
+     <!-- Modal -->
+     <div id="modal" class="cabecera--modal">
+          <div id="modal_inicio-sesion" class="modal--contenido modal--contenido_inicio-sesion">
+               <span class="close" onclick="document.getElementById('modal').style.display='none'">&times;</span>
+               <h4 class="titulo modal--titulo">Iniciar Sesión</h4>
+               <form action="" class="modal--formulario">
+                    <div class="formulario--campo formulario--campo_vertical">
+                         <label for="nombre" class="campo_etiqueta">Nombre de Usuario o Correo:</label>
+                         <input type="text" name="nombre" placeholder="Usuario o correo electrónico..."
+                              class="campo_input">
+                    </div>
+                    <div class="formulario--campo formulario--campo_vertical">
+                         <label for="contrasena" class="campo_etiqueta">Contraseña:</label>
+                         <input type="password" name="contrasena" placeholder="Escribe aquí tu contraseña..."
+                              class="campo_input">
+                    </div>
+                    <input type="submit" value="Iniciar Sesión"
+                         class="formulario--boton-enviar formulario--boton-enviar_modal boton">
+               </form>
+               <a href="#" onclick="document.getElementById('modal_inicio-sesion').style.display='none';
+                                   document.getElementById('modal_registro').style.display='block';">¿No tienes una
+                    cuenta?</a>
+          </div>
+          <div id="modal_registro" class="modal--contenido modal--contenido_registro">
+               <span class="close" onclick="document.getElementById('modal').style.display='none'">&times;</span>
+               <h4 class="titulo modal--titulo">Registrarse</h4>
+               <form action="" class="modal--formulario">
+                    <div class="formulario--campo formulario--campo_vertical">
+                         <label for="nombre" class="campo_etiqueta">Nombre de Usuario:</label>
+                         <input type="text" name="nombre" placeholder="Escribe aquí tu nombre de usuario..."
+                              class="campo_input">
+                    </div>
+                    <div class="formulario--campo formulario--campo_vertical">
+                         <label for="correo" class="campo_etiqueta">Correo:</label>
+                         <input type="email" name="correo" placeholder="Escribe aquí tu correo electrónico..."
+                              class="campo_input">
+                    </div>
+                    <div class="formulario--campo formulario--campo_vertical">
+                         <label for="contrasena" class="campo_etiqueta">Contraseña:</label>
+                         <input type="password" name="contrasena" placeholder="Escribe aquí tu contrtaseña..."
+                              class="campo_input">
+                    </div>
+                    <input type="submit" value="Registrarse"
+                         class="formulario--boton-enviar formulario--boton-enviar_modal boton">
+               </form>
+               <a href="#" onclick="document.getElementById('modal_inicio-sesion').style.display='block';
+                                   document.getElementById('modal_registro').style.display='none';">¿Ya estás
+                    registrado?</a>
+          </div>
+     </div>
      <section class="contenido">
           <div class="contenido--entrada contenido--entrada_hombre">
                <h3 class="titulo entrada--titulo">Novedades</h3>
           </div>
           <main class="contenido--ropa">
-               
+
           </main>
      </section>
      <footer class="pie-pagina">
